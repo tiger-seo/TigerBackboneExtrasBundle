@@ -1,0 +1,17 @@
+{
+    "name": "tiger/backbone-extras-bundle",
+    "type": "symfony-bundle",
+    "description": "BackboneExtras asset-bundle for Symfony2",
+    "keywords": ["backbone", "symfony", "symfony2", "bundle"],
+    "license": "MIT",
+    "version": "0.9.2",
+    "autoload": {
+        "psr-0": {
+            "Tiger\\BackboneExtrasBundle": ""
+        }
+    },
+    "target-dir": "Tiger/BackboneExtrasBundle",
+    "require": {
+        "symfony/symfony": ">=2.0"
+    }
+}

@@ -4,7 +4,7 @@
  * - "data-type" attributes are required.
  * - The main placeholder tags such as the following are required: fieldsets, fields
  */
-define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
+define(['jquery', 'underscore', 'backbone', 'backbone-forms'], function($, _, Backbone) {
   var Form = Backbone.Form;
 
   
@@ -28,6 +28,7 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
         <label for="{{id}}">{{title}}</label>\
         <div class="bbf-editor">{{editor}}</div>\
         <div class="bbf-help">{{help}}</div>\
+        <div class="bbf-error">{{error}}</div>\
       </li>\
     ',
 
@@ -36,6 +37,7 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
         <label for="{{id}}">{{title}}</label>\
         <div class="bbf-editor">{{editor}}</div>\
         <div class="bbf-help">{{help}}</div>\
+        <div class="bbf-error">{{error}}</div>\
       </li>\
     ',
 

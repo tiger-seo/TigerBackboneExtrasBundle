@@ -4,7 +4,7 @@
  * - "data-type" attributes are required.
  * - The main placeholder tags such as the following are required: fieldsets, fields
  */
-define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
+define(['jquery', 'underscore', 'backbone', 'backbone-forms'], function($, _, Backbone) {
   var Form = Backbone.Form;
 
     
@@ -28,7 +28,8 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
       <div class="control-group field-{{key}}">\
         <label class="control-label" for="{{id}}">{{title}}</label>\
         <div class="controls">\
-          <div class="input-xlarge">{{editor}}</div>\
+          {{editor}}\
+          <div class="help-inline">{{error}}</div>\
           <div class="help-block">{{help}}</div>\
         </div>\
       </div>\
@@ -36,7 +37,9 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 
     nestedField: '\
       <div class="field-{{key}}">\
-        <div title="{{title}}" class="input-xlarge">{{editor}}</div>\
+        <div title="{{title}}" class="input-xlarge">{{editor}}\
+          <div class="help-inline">{{error}}</div>\
+        </div>\
         <div class="help-block">{{help}}</div>\
       </div>\
     ',
@@ -44,7 +47,7 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
     list: '\
       <div class="bbf-list">\
         <ul class="unstyled clearfix">{{items}}</ul>\
-        <button type="button" class="btn bbf-add" data-action="add">Add</div>\
+        <button class="btn bbf-add" data-action="add">Add</button>\
       </div>\
     ',
 
